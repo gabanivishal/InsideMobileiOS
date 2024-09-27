@@ -1,0 +1,108 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InsideMobileiOS
+import Foundation
+import Swift
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public protocol InsideClientDelegate {
+  @objc optional func onConnected()
+  @objc optional func onChatAvailable(_ available: Swift.Bool)
+  @objc optional func onChatMessage(messageText: Swift.String, proactiveChat: Swift.Bool, senderName: Swift.String, operatorImageUrl: Swift.String?)
+  @objc optional func onAddToBasket(productId: Swift.String, skuId: Swift.String, completionBlock: @escaping ((Swift.Bool) -> Swift.Void))
+  @objc optional func onViewProductDetails(productId: Swift.String, skuId: Swift.String?)
+  @objc optional func onChatClose()
+  @objc optional func onChatMinimise()
+  @objc optional func onChatEnded(_ endedBy: Swift.String)
+  @objc optional func onDisconnected()
+  @objc optional func onError(message: Swift.String, statusCode: Swift.Int)
+  @objc optional func onLinkTapped(url: Foundation.URL?) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc open class InsideClient : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
+  @objc open var delegate: (any InsideMobileiOS.InsideClientDelegate)?
+  @objc open var user: InsideMobileiOS.InsideUser?
+  @objc open var view: InsideMobileiOS.InsideView
+  @objc open var cart: InsideMobileiOS.InsideCart
+  @objc open var chatViewController: InsideMobileiOS.InsideViewController?
+  @objc open var unreadMessagesCount: Swift.Int
+  open var debug: Swift.Bool
+  @objc open var loaderBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc open var loaderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc open var currentChatId: Swift.Int
+  @objc convenience public init(domainURL: Swift.String, accountKey: Swift.String, mobileSiteURL: Swift.String, appName: Swift.String = "", subsiteId: Swift.String = "")
+  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc open func setAPNSDeviceToken(_ token: Swift.String)
+  @objc open func disconnect()
+  @objc open func push()
+  @objc open func setUser(userId: Swift.String, name: Swift.String, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:])
+  @objc open func unsetUser()
+  @objc open func setView(type: InsideMobileiOS.InsideViewType, name: Swift.String, category: Swift.String? = nil, image: Swift.String? = nil, url: Swift.String? = nil, price: Swift.Float = 0, sku: Swift.String? = nil, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:], tags: [Swift.String] = [])
+  @objc open func setCart(cartId: Swift.String? = "auto", cartTotal: Swift.Float, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:])
+  @objc open func abandonCart()
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension InsideMobileiOS.InsideClient : WebKit.WKUIDelegate {
+  @objc dynamic open func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  @objc dynamic open func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+}
+extension InsideMobileiOS.InsideClient : WebKit.WKNavigationDelegate {
+  @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+  @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @objc dynamic open func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class InsideViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) open var openChatPane: ((_ open: Swift.Bool) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers open class InsideCart : ObjectiveC.NSObject {
+  @objc open var data: [Swift.String : Swift.AnyObject]
+  @objc open func addItem(sku: Swift.String, name: Swift.String, price: Swift.Float, qty: Swift.Int, category: Swift.String? = nil, img: Swift.String? = nil)
+  @objc open func updateItem(sku: Swift.String, name: Swift.String, price: Swift.Float, qty: Swift.Int, category: Swift.String? = nil, img: Swift.String? = nil)
+  @objc open func removeItem(sku: Swift.String)
+  @objc open func clearItems()
+  @objc open func updateCartTotal(cartTotal: Swift.Float)
+  @objc open func completeOrder(completedOrderId: Swift.String, completedOrderTotal: Swift.Float)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class InsideUser : ObjectiveC.NSObject {
+  @objc open var data: [Swift.String : Swift.AnyObject]
+  @objc deinit
+}
+@objc public enum InsideViewType : Swift.Int {
+  case product = 1, productCategory = 2, article = 3, search = 4, home = 5, checkout = 6, other = 7, notFound = 8, login = 9, orderConfirmed = 10, lead = 11, leadConfirmed = 12, data = 400, alert = 401
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc open class InsideView : ObjectiveC.NSObject {
+  @objc open var category: Swift.String?
+  @objc open var img: Swift.String?
+  @objc open var url: Swift.String?
+  @objc open var price: Swift.Float
+  @objc open var sku: Swift.String?
+  @objc open var data: [Swift.String : Swift.AnyObject]
+  @objc open var tags: [Swift.String]
+  @objc deinit
+}
+extension InsideMobileiOS.InsideViewType : Swift.Equatable {}
+extension InsideMobileiOS.InsideViewType : Swift.Hashable {}
+extension InsideMobileiOS.InsideViewType : Swift.RawRepresentable {}

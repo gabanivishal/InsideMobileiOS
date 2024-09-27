@@ -1,0 +1,4 @@
+framework module InsideMobileiOS {
+  header "InsideMobileiOS-Swift.h"
+  requires objc
+}
