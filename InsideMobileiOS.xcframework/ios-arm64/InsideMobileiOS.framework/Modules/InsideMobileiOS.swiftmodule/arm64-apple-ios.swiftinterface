@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InsideMobileiOS
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import Foundation
 import Swift
 import WebKit
@@ -20,55 +21,55 @@ import _SwiftConcurrencyShims
   @objc optional func onError(message: Swift.String, statusCode: Swift.Int)
   @objc optional func onLinkTapped(url: Foundation.URL?) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc open class InsideClient : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
-  @objc open var delegate: (any InsideMobileiOS.InsideClientDelegate)?
-  @objc open var user: InsideMobileiOS.InsideUser?
-  @objc open var view: InsideMobileiOS.InsideView
-  @objc open var cart: InsideMobileiOS.InsideCart
-  @objc open var chatViewController: InsideMobileiOS.InsideViewController?
-  @objc open var unreadMessagesCount: Swift.Int
-  open var debug: Swift.Bool
-  @objc open var loaderBackgroundColor: UIKit.UIColor {
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency open class InsideClient : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
+  @objc @_Concurrency.MainActor @preconcurrency open var delegate: (any InsideMobileiOS.InsideClientDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency open var user: InsideMobileiOS.InsideUser?
+  @objc @_Concurrency.MainActor @preconcurrency open var view: InsideMobileiOS.InsideView
+  @objc @_Concurrency.MainActor @preconcurrency open var cart: InsideMobileiOS.InsideCart
+  @objc @_Concurrency.MainActor @preconcurrency open var chatViewController: InsideMobileiOS.InsideViewController?
+  @objc @_Concurrency.MainActor @preconcurrency open var unreadMessagesCount: Swift.Int
+  @_Concurrency.MainActor @preconcurrency open var debug: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency open var loaderBackgroundColor: UIKit.UIColor {
     @objc get
     @objc set
   }
-  @objc open var loaderColor: UIKit.UIColor {
+  @objc @_Concurrency.MainActor @preconcurrency open var loaderColor: UIKit.UIColor {
     @objc get
     @objc set
   }
-  @objc open var currentChatId: Swift.Int
-  @objc convenience public init(domainURL: Swift.String, accountKey: Swift.String, mobileSiteURL: Swift.String, appName: Swift.String = "", subsiteId: Swift.String = "")
-  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
-  @objc open func setAPNSDeviceToken(_ token: Swift.String)
-  @objc open func disconnect()
-  @objc open func push()
-  @objc open func setUser(userId: Swift.String, name: Swift.String, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:])
-  @objc open func unsetUser()
-  @objc open func setView(type: InsideMobileiOS.InsideViewType, name: Swift.String, category: Swift.String? = nil, image: Swift.String? = nil, url: Swift.String? = nil, price: Swift.Float = 0, sku: Swift.String? = nil, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:], tags: [Swift.String] = [])
-  @objc open func setCart(cartId: Swift.String? = "auto", cartTotal: Swift.Float, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:])
-  @objc open func abandonCart()
+  @objc @_Concurrency.MainActor @preconcurrency open var currentChatId: Swift.Int
+  @objc @_Concurrency.MainActor @preconcurrency convenience public init(domainURL: Swift.String, accountKey: Swift.String, mobileSiteURL: Swift.String, appName: Swift.String = "", subsiteId: Swift.String = "")
+  @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc @_Concurrency.MainActor @preconcurrency open func setAPNSDeviceToken(_ token: Swift.String)
+  @objc @_Concurrency.MainActor @preconcurrency open func disconnect()
+  @objc @_Concurrency.MainActor @preconcurrency open func push()
+  @objc @_Concurrency.MainActor @preconcurrency open func setUser(userId: Swift.String, name: Swift.String, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:])
+  @objc @_Concurrency.MainActor @preconcurrency open func unsetUser()
+  @objc @_Concurrency.MainActor @preconcurrency open func setView(type: InsideMobileiOS.InsideViewType, name: Swift.String, category: Swift.String? = nil, image: Swift.String? = nil, url: Swift.String? = nil, price: Swift.Float = 0, sku: Swift.String? = nil, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:], tags: [Swift.String] = [])
+  @objc @_Concurrency.MainActor @preconcurrency open func setCart(cartId: Swift.String? = "auto", cartTotal: Swift.Float, data: Swift.Dictionary<Swift.String, Swift.AnyObject> = [:])
+  @objc @_Concurrency.MainActor @preconcurrency open func abandonCart()
   @objc deinit
-  @objc override dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
 }
 extension InsideMobileiOS.InsideClient : WebKit.WKUIDelegate {
-  @objc dynamic open func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
-  @objc dynamic open func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
 }
 extension InsideMobileiOS.InsideClient : WebKit.WKNavigationDelegate {
-  @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
-  @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  @objc dynamic open func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
 }
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class InsideViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) open var openChatPane: ((_ open: Swift.Bool) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency open class InsideViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency open var openChatPane: ((_ open: Swift.Bool) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers open class InsideCart : ObjectiveC.NSObject {
@@ -103,6 +104,7 @@ extension InsideMobileiOS.InsideClient : WebKit.WKNavigationDelegate {
   @objc open var tags: [Swift.String]
   @objc deinit
 }
+extension InsideMobileiOS.InsideClient : Swift.Sendable {}
 extension InsideMobileiOS.InsideViewType : Swift.Equatable {}
 extension InsideMobileiOS.InsideViewType : Swift.Hashable {}
 extension InsideMobileiOS.InsideViewType : Swift.RawRepresentable {}
