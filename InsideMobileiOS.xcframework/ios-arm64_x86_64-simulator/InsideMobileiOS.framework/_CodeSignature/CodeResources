@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nSnrMKF/kUyIUI5z5b8EkYH7XbU=
+		ZKMXN4JilXtdVMtmshDq60DNQU0=
 		</data>
 		<key>Modules/InsideMobileiOS.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JafTSDxOptor48W4W7qDlSpY6PA=
+		ly6Pn5YII+Gn+hwxeuifLSLpp+A=
 		</data>
 		<key>Modules/InsideMobileiOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/InsideMobileiOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JafTSDxOptor48W4W7qDlSpY6PA=
+		ly6Pn5YII+Gn+hwxeuifLSLpp+A=
 		</data>
 		<key>Modules/InsideMobileiOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t9fN43ZdetDgZCH4De/3kPppTVh3IfVuHaTgfzCiuaw=
+			9ZiV+iGxExp3+GISVlZOf3fOwD2oWZf5JMj3WP9L62I=
 			</data>
 		</dict>
 		<key>Modules/InsideMobileiOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t9fN43ZdetDgZCH4De/3kPppTVh3IfVuHaTgfzCiuaw=
+			9ZiV+iGxExp3+GISVlZOf3fOwD2oWZf5JMj3WP9L62I=
 			</data>
 		</dict>
 		<key>Modules/InsideMobileiOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>

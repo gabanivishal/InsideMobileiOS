@@ -5704,182 +5704,182 @@
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "Dictionary",
-      "offset": 43316,
+      "offset": 43317,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 44999,
+      "offset": 45000,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "Dictionary",
-      "offset": 45114,
+      "offset": 45115,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "Array",
-      "offset": 45163,
+      "offset": 45164,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 46058,
+      "offset": 46059,
       "length": 6,
       "value": "\"auto\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "Dictionary",
-      "offset": 46122,
+      "offset": 46123,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54434,
+      "offset": 54435,
       "length": 12,
       "value": "\"orderTotal\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54473,
+      "offset": 54474,
       "length": 9,
       "value": "\"orderId\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54510,
+      "offset": 54511,
       "length": 11,
       "value": "\"trackView\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54548,
+      "offset": 54549,
       "length": 15,
       "value": "\"chatAvailable\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54590,
+      "offset": 54591,
       "length": 13,
       "value": "\"chatVisible\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54630,
+      "offset": 54631,
       "length": 9,
       "value": "\"logging\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54666,
+      "offset": 54667,
       "length": 12,
       "value": "\"chatClosed\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54705,
+      "offset": 54706,
       "length": 15,
       "value": "\"chatMinimised\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54747,
+      "offset": 54748,
       "length": 15,
       "value": "\"chatConnected\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54789,
+      "offset": 54790,
       "length": 18,
       "value": "\"chatDisconnected\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54834,
+      "offset": 54835,
       "length": 13,
       "value": "\"unreadCount\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54874,
+      "offset": 54875,
       "length": 18,
       "value": "\"chatnotification\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54919,
+      "offset": 54920,
       "length": 8,
       "value": "\"chatID\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54954,
+      "offset": 54955,
       "length": 11,
       "value": "\"chatEnded\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 54992,
+      "offset": 54993,
       "length": 13,
       "value": "\"chatEndedBy\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 55032,
+      "offset": 55033,
       "length": 12,
       "value": "\"senderName\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 55071,
+      "offset": 55072,
       "length": 13,
       "value": "\"addToBasket\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 55111,
+      "offset": 55112,
       "length": 20,
       "value": "\"viewProductDetails\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 55158,
+      "offset": 55159,
       "length": 12,
       "value": "\"PopupEvent\""
     },
     {
       "filePath": "\/Users\/vishalgabani\/Projects\/Inside\/CodeBase\/iOS\/InsideMobileSDK\/InsideMobileWeb\/InsideClient.swift",
       "kind": "StringLiteral",
-      "offset": 55197,
+      "offset": 55198,
       "length": 14,
       "value": "\"ActiveChatId\""
     },
